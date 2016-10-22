@@ -1,7 +1,7 @@
 $(function (){
   $.ajax({
     type: "GET",
-    url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson",
+    url: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson",
     //url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
     success: function(data){
       console.log(data);
@@ -13,7 +13,7 @@ $(function (){
 
   $.ajax({
     type: "GET",
-    url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson",
+    url: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson",
     //url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
     success: function(data){
       console.log(data);
@@ -25,7 +25,7 @@ $(function (){
 
   $.ajax({
     type: "GET",
-    url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
+    url: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
     //url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
     success: function(data){
       console.log(data);
@@ -37,7 +37,7 @@ $(function (){
 
   $.ajax({
     type: "GET",
-    url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.geojson",
+    url: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.geojson",
     //url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
     success: function(data){
       console.log(data);
@@ -49,7 +49,7 @@ $(function (){
 
   $.ajax({
     type: "GET",
-    url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson",
+    url: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson",
     //url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
     success: function(data){
       console.log(data);
