@@ -11,10 +11,15 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|Nunito|Ubuntu+Condensed" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|Nunito|PT+Sans+Caption|Ubuntu+Condensed" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+    <!-- <link href='glass.css' rel='stylesheet' type='text/css' /> -->
     <link href='tabs2.css' rel='stylesheet' type='text/css' />
 
   </head>
   <body>
+
+
 
     <!-- TABS CONTAINER -->
     <div class="container">
@@ -49,7 +54,8 @@
             </li>
 
         	</ul>
-<!--FDAS -->
+<!--
+FDAS -->
         </div>
       </div>
     </div>
@@ -62,21 +68,25 @@
         <script id="locations-template" type="text/x-handlebars-template">
           <table>
             <tr>
-              <th id="head">
+              <th>
                 Magnitude
               </th>
-              <th id="head">
+
+              <th>
                 Place
               </th>
+              <!-- <th></th> -->
             </tr>
               {{#each features}}
               <tr>
                 <td>
                   {{this.properties.mag}}
                 </td>
+
                 <td>
                   {{this.properties.place}}
                 </td>
+                <!-- <td>HI</td> -->
               </tr>
               {{/each}}
           </table>
@@ -119,7 +129,7 @@
         </script>
         <div id="head">
           <!-- Earthquake data<br /> -->
-          4.5 earthquakes in the past 30 days
+          4.5+ earthquakes in the past 30 days
         </div>
         <div id="m45data">
           <a href="#all" class="nav-link disabled"></a>
@@ -154,7 +164,7 @@
         </script>
         <div id="head">
           <!-- Earthquake data<br /> -->
-          2.5 earthquakes in the past 30 days
+          2.5+ earthquakes in the past 30 days
         </div>
         <div id="m25data">
           <a href="#m45" class="nav-link disabled"></a>
@@ -189,7 +199,7 @@
       </script>
       <div id="head">
         <!-- Earthquake data<br /> -->
-        1.0 earthquakes in the past 30 days
+        1.0+ earthquakes in the past 30 days
       </div>
       <div id="m10data">
         <a href="#m45" class="nav-link disabled"></a>
