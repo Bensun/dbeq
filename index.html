@@ -1,44 +1,253 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <title>EQ</title>
-  <script id="locations-template" type="text/x-handlebars-template">
-    <table>
-      <tr>
-        <th>
-          Magnitude
-        </th>
-        <th>
-          Place
-        </th>
-      </tr>
-        {{#each features}}
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|Nunito|Ubuntu+Condensed" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|Nunito|PT+Sans+Caption|Ubuntu+Condensed" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href='tabs2.css' rel='stylesheet' type='text/css' />
+
+  </head>
+  <body>
+
+    <!-- TABS CONTAINER -->
+    <div class="container">
+      <div class="row" id="tophead">
+        <i class="fa fa-globe" aria-hidden="true"></i> Live Earthquake Data
+      </div>
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        	<br />
+
+        	<ul class="nav nav-tabs">
+        		<li class="nav-item">
+        			<a href="#sig" class="nav-link active" role="tab" data-toggle="tab">Significant</a>
+
+        		</li>
+
+        		<li class="nav-item">
+        			<a href="#m45" class="nav-link" role="tab" data-toggle="tab">M4.5+</a>
+        		</li>
+
+        		<li class="nav-item">
+        			<a href="#m25" class="nav-link" role="tab" data-toggle="tab">M2.5+</a>
+        		</li>
+
+            <li class="nav-item">
+              <a href="#m10" class="nav-link" role="tab" data-toggle="tab">M1.0+</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#all" class="nav-link" role="tab" data-toggle="tab">All</a>
+            </li>
+
+        	</ul>
+<!--FDAS -->
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- TABS CONTENT TO BE DISPLAYED -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="sig">
+        <script id="locations-template" type="text/x-handlebars-template">
+          <table>
+            <tr>
+              <th id="head">
+                Magnitude
+              </th>
+              <th id="head">
+                Place
+              </th>
+            </tr>
+              {{#each features}}
+              <tr>
+                <td>
+                  {{this.properties.mag}}
+                </td>
+                <td>
+                  {{this.properties.place}}
+                </td>
+              </tr>
+              {{/each}}
+          </table>
+        </script>
+        <div id="head">
+          <!-- Earthquake data<br /> -->
+          Significant earthquakes in the past 30 days
+        </div>
+        <div id="sigdata">
+          <a href="#m45" class="nav-link disabled"></a>
+          <a href="#m25" class="nav-link disabled"></a>
+          <a href="#m10" class="nav-link disabled"></a>
+          <a href="#all" class="nav-link disabled"></a>
+
+        </div>
+
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="m45">
+        <script id="locations-template" type="text/x-handlebars-template">
+          <table>
+            <tr>
+              <th>
+                Magnitude
+              </th>
+              <th>
+                Place
+              </th>
+            </tr>
+              {{#each features}}
+              <tr>
+                <td>
+                  {{this.properties.mag}}
+                </td>
+                <td>
+                  {{this.properties.place}}
+                </td>
+              </tr>
+              {{/each}}
+          </table>
+        </script>
+        <div id="head">
+          <!-- Earthquake data<br /> -->
+          4.5 earthquakes in the past 30 days
+        </div>
+        <div id="m45data">
+          <a href="#all" class="nav-link disabled"></a>
+          <a href="#m25" class="nav-link disabled"></a>
+          <a href="#m10" class="nav-link disabled"></a>
+          <a href="#all" class="nav-link disabled"></a>
+
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="m25">
+        <script id="locations-template" type="text/x-handlebars-template">
+          <table>
+            <tr>
+              <th>
+                Magnitude
+              </th>
+              <th>
+                Place
+              </th>
+            </tr>
+              {{#each features}}
+              <tr>
+                <td>
+                  {{this.properties.mag}}
+                </td>
+                <td>
+                  {{this.properties.place}}
+                </td>
+              </tr>
+              {{/each}}
+          </table>
+        </script>
+        <div id="head">
+          <!-- Earthquake data<br /> -->
+          2.5 earthquakes in the past 30 days
+        </div>
+        <div id="m25data">
+          <a href="#m45" class="nav-link disabled"></a>
+          <a href="#allni" class="nav-link disabled"></a>
+          <a href="#m10" class="nav-link disabled"></a>
+          <a href="#all" class="nav-link disabled"></a>
+
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="m10">
+      <script id="locations-template" type="text/x-handlebars-template">
+        <table>
+          <tr>
+            <th>
+              Magnitude
+            </th>
+            <th>
+              Place
+            </th>
+          </tr>
+            {{#each features}}
+            <tr>
+              <td>
+                {{this.properties.mag}}
+              </td>
+              <td>
+                {{this.properties.place}}
+              </td>
+            </tr>
+            {{/each}}
+        </table>
+      </script>
+      <div id="head">
+        <!-- Earthquake data<br /> -->
+        1.0 earthquakes in the past 30 days
+      </div>
+      <div id="m10data">
+        <a href="#m45" class="nav-link disabled"></a>
+        <a href="#m25" class="nav-link disabled"></a>
+        <a href="#sig" class="nav-link disabled"></a>
+        <a href="#all" class="nav-link disabled"></a>
+
+      </div>
+
+  </div>
+  <div role="tabpanel" class="tab-pane fade" id="all">
+    <script id="locations-template" type="text/x-handlebars-template">
+      <table>
         <tr>
-          <td>
-            {{this.properties.mag}}
-          </td>
-          <td>
-            {{this.properties.place}}
-          </td>
+          <th>
+            Magnitude
+          </th>
+          <th>
+            Place
+          </th>
         </tr>
-        {{/each}}
-    </table>
-  </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
-  <script src="main.js"></script>
-</head>
-<body>
-  <div>
-    Earthquake data<br />
-    Significant earthquakes in the past 30 days
+          {{#each features}}
+          <tr>
+            <td>
+              {{this.properties.mag}}
+            </td>
+            <td>
+              {{this.properties.place}}
+            </td>
+          </tr>
+          {{/each}}
+      </table>
+    </script>
+    <div id="head">
+      <!-- Earthquake data<br /> -->
+      All earthquakes in the past 30 days
+    </div>
+    <div id="alldata">
+      <a href="#m45" class="nav-link disabled"></a>
+      <a href="#m25" class="nav-link disabled"></a>
+      <a href="#m10" class="nav-link disabled"></a>
+      <a href="#sig" class="nav-link disabled"></a>
+    </div>
   </div>
-  <div id="eqdata">
-  
-  </div>
-  <div>
-    Benson Han
-  </div>
-</body>
-</html>
+</div>
+
+<!-- OUTSIDE CONTENT -->
+    </div>
+    <div>
+      <p id="tophead">Benson Han & Tanzeela Khan</p>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="main.js"></script>
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+  </body>

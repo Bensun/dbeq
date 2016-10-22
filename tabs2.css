@@ -1,0 +1,44 @@
+
+/*TABS STYLING*/
+
+#tophead{
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 30px;
+}
+
+li a {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  background-color: #c6c386;
+  color: white;
+}
+
+/*DATA STYLING*/
+table {
+  margin-left: 10px;
+}
+
+.tab-content {
+  background-color: 	#87c6c3;
+  color: black;
+  /*font-family: 'PT Sans Caption', sans-serif;*/
+  font-family: 'Cuprum', sans-serif;
+
+  /*color: #c69687;*/
+  /*background-image: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQonBtaSJm3z2Qjgm67MqlIv7Zr4WneBvLwOzW0G-Cznd7tbZfB"*/
+}
+
+#head {
+  color: #5b391e;
+  /*font-family: 'Cuprum', sans-serif;*/
+  font-family: 'PT Sans Caption', sans-serif;
+  margin-left: 10px;
+
+}
+
+/*BACKGROUND STYLING*/
+
+body {
+  background-color: #5b391e;
+  color: white;
+  /*margin-left: 20px;*/
+}
